@@ -2,6 +2,7 @@
 .modgit/
 .modman/
 .idea/
+var/cache/
 app/code/community/Phoenix/Moneybookers/
 app/code/community/Cm/RedisSession/
 app/code/core/
