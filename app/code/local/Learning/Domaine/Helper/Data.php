@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Created by PhpStorm.
+ * User: Florian
+ * Date: 23/06/2016
+ * Time: 10:19
+ */
+
+
+
 class Learning_Domaine_Helper_Data extends Mage_Core_Helper_Abstract
 {
     const IMAGE_FOLDER = "cepage";
@@ -13,4 +22,5 @@ class Learning_Domaine_Helper_Data extends Mage_Core_Helper_Abstract
     {
         return Mage::getBaseUrl('media') . self::IMAGE_FOLDER . '/' . $filename;
     }
+
 }
