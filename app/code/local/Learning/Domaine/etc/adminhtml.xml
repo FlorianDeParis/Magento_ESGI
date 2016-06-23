@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<config>
+    <menu>
+        <learning_domaine translate="title" module="learning_domaine">
+            <title>Domaines</title>
+            <sort_order>70</sort_order>
+            <children>
+                <domaine_cepage translate="title" module="learning_domaine">
+                    <title>Gérer les cépages</title>
+                    <action>adminhtml/domaine_cepage</action>
+                    <sort_order>0</sort_order>
+                </domaine_cepage>
+            </children>
+        </learning_domaine>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <learning_domaine>
+                        <children>
+                            <domaine_cepage translate="title" module="learning_domaine">
+                                <title>Gérer les cépages</title>
+                                <sort_order>0</sort_order>
+                            </domaine_cepage>
+                        </children>
+                    </learning_domaine>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
