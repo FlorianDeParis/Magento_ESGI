@@ -1,6 +1,6 @@
 <?php
 
-class Learning_Domaine_Model_Slide extends Mage_Core_Model_Abstract
+class Learning_Domaine_Model_Cepage extends Mage_Core_Model_Abstract
 {
 
     /**

@@ -39,9 +39,9 @@ class Learning_Domaine_Block_Adminhtml_Cepage_Edit_Tab_Form extends Mage_Adminht
             'required' => true,
         ));
 
-        if (Mage::getSingleton('adminhtml/session')->getSlideData()) {
-            $form->setValues(Mage::getSingleton('adminhtml/session')->getSlideData());
-            Mage::getSingleton('adminhtml/session')->getSlideData(null);
+        if (Mage::getSingleton('adminhtml/session')->getCepageData()) {
+            $form->setValues(Mage::getSingleton('adminhtml/session')->getCepageData());
+            Mage::getSingleton('adminhtml/session')->getCepageData(null);
         } elseif (Mage::registry('cepage_data')) {
             $form->setValues(Mage::registry('cepage_data')->getData());
         }
