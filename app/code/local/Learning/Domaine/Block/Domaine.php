@@ -6,8 +6,7 @@ class Learning_Domaine_Block_Domaine extends Mage_Core_Block_Template
     {
         $cepages = Mage::getModel('learning_domaine/cepage')
             ->getCollection()
-            ->addIsActiveFilter()
-            ->addOrderByPosition();
+            ->addIsActiveFilter();
         return $cepages;
     }
 
