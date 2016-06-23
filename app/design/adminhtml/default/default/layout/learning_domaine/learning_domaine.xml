@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<layout>
+
+    <adminhtml_domaine_cepage_index>
+        <reference name="content">
+            <block type="learning_domaine/adminhtml_cepage" name="learning_domaine_adminhtml_cepage"></block>
+        </reference>
+    </adminhtml_domaine_cepage_index>
+    <adminhtml_domaine_cepage_edit>
+        <reference name="content">
+            <block type="learning_domaine/adminhtml_cepage_edit" name="learning_domaine_adminhtml_cepage_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="learning_domaine/adminhtml_cepage_edit_tabs" name="learning_domaine_adminhtml_cepage_edit_tabs">
+                <block type="learning_domaine/adminhtml_cepage_edit_tab_form" name="learning_domaine_adminhtml_cepage_edit_tab_form" />
+                <action method="addTab">
+                    <name>main_section</name>
+                    <block>learning_domaine_adminhtml_cepage_edit_tab_form</block>
+                </action>
+            </block>
+        </reference>
+    </adminhtml_domaine_cepage_edit>
+</layout>
