@@ -1,6 +1,6 @@
 <?php
 
-class Learning_Domaine_Adminhtml_Domaine_SlideController extends Mage_Adminhtml_Controller_Action
+class Learning_Domaine_Adminhtml_Domaine_DomaineController extends Mage_Adminhtml_Controller_Action
 {
 
     /**
@@ -35,7 +35,7 @@ class Learning_Domaine_Adminhtml_Domaine_SlideController extends Mage_Adminhtml_
     public function editAction()
     {
         $id = $this->getRequest()->getParam('id');
-        /** @var Learning_Domaine_Model_Slide $cepage */
+        /** @var Learning_Domaine_Model_Cepage $cepage */
         $cepage = Mage::getModel('learning_domaine/cepage')->load($id);
 
         if ($cepage->getId() || $id == 0) {
@@ -64,7 +64,7 @@ class Learning_Domaine_Adminhtml_Domaine_SlideController extends Mage_Adminhtml_
             $delete = (!isset($data['image_url']['delete']) || $data['image_url']['delete'] != '1') ? false : true;
             $data['image_url'] = $this->_saveImage('image_url', $delete);
 
-            /** @var Learning_Domaine_Model_Slide $cepage */
+            /** @var Learning_Domaine_Model_Cepage $cepage */
             $cepage = Mage::getModel('learning_domaine/cepage');
 
             if ($id = $this->getRequest()->getParam('id')) {
@@ -114,7 +114,7 @@ class Learning_Domaine_Adminhtml_Domaine_SlideController extends Mage_Adminhtml_
     {
         if ($id = $this->getRequest()->getParam('id')) {
             try {
-                /** @var Learning_Domaine_Model_Slide $cepage */
+                /** @var Learning_Domaine_Model_Cepage $cepage */
                 $cepage = Mage::getModel('learning_domaine/cepage');
                 $cepage->load($id)->delete();
 
