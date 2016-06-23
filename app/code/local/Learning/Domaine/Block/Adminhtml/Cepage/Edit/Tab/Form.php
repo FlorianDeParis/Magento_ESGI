@@ -38,6 +38,14 @@ class Learning_Domaine_Block_Adminhtml_Cepage_Edit_Tab_Form extends Mage_Adminht
             'name'     => 'region',
             'required' => true,
         ));
+        $wysiwygConfig = Mage::getSingleton('cms/wysiwyg_config');
+        $fieldset->addField('description', 'editor', array(
+            'label'    => Mage::helper('learning_domaine')->__('Description'),
+            'name'     => 'description',
+            'wysiwyg'   => true,
+            'required' => true,
+            'config'    => $wysiwygConfig,
+        ));
 
         if (Mage::getSingleton('adminhtml/session')->getCepageData()) {
             $form->setValues(Mage::getSingleton('adminhtml/session')->getCepageData());
