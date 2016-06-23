@@ -187,7 +187,7 @@ class Learning_Domaine_Adminhtml_Domaine_SlideController extends Mage_Adminhtml_
         } elseif (isset($_FILES[$imageAttr]['name']) && $_FILES[$imageAttr]['name'] != '') {
             try {
                 $uploader = new Varien_File_Uploader($imageAttr);
-                $uploader->setAllowedExtensions(array('jpg', 'jpeg', 'png'));
+                $uploader->setAllowedExtensions(array('jpg', 'jpeg', 'png', 'gif'));
                 $uploader->setAllowRenameFiles(false);
                 $uploader->setFilesDispersion(false);
                 $path = Mage::getBaseDir('media') . DS . 'cepage' . DS;

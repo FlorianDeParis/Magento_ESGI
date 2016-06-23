@@ -33,12 +33,10 @@ class Learning_Domaine_Block_Adminhtml_Cepage_Edit_Tab_Form extends Mage_Adminht
             'required' => true
         ));
 
-        $fieldset->addField('position', 'text', array(
-            'label'    => Mage::helper('learning_domaine')->__('Position'),
-            'class'    => 'validate-number',
-            'name'     => 'position',
+        $fieldset->addField('region', 'text', array(
+            'label'    => Mage::helper('learning_domaine')->__('Region'),
+            'name'     => 'region',
             'required' => true,
-            'value'    => 0
         ));
 
         if (Mage::getSingleton('adminhtml/session')->getSlideData()) {
