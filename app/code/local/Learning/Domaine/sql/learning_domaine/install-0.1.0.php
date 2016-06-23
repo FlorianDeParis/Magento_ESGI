@@ -9,8 +9,8 @@
 $installer = $this;
 $installer->startSetup();
 
-$slideTable = $installer->getConnection()
-    ->newTable($installer->getTable('learning_slider/domaine'))
+$cepageTable = $installer->getConnection()
+    ->newTable($installer->getTable('learning_domaine/cepage'))
     ->addColumn('entity_id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
         'identity' => true,
         'unsigned' => true,
@@ -23,6 +23,6 @@ $slideTable = $installer->getConnection()
     ->addColumn('region', Varien_Db_Ddl_Table::TYPE_TEXT, 255, array())
     ->addColumn('country', Varien_Db_Ddl_Table::TYPE_TEXT, 255, array());
 
-$installer->getConnection()->createTable($slideTable);
+$installer->getConnection()->createTable($cepageTable);
 
 $installer->endSetup();
