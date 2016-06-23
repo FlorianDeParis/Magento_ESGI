@@ -47,20 +47,31 @@ class Learning_Domaine_Block_Adminhtml_Cepage_Grid extends Mage_Adminhtml_Block_
             'index'  => 'name'
         ));
 
-        $this->addColumn('is_active', array(
+        $this->addColumn('image_url', array(
             'header'  => $this->__('Status'),
-            'index'   => 'is_active',
+            'index'   => 'image_url',
             'type'    => 'options',
-            'options' => Mage::getSingleton('adminhtml/system_config_source_yesno')->toArray(),
             'align'   => 'left',
             'width'   => '100px'
         ));
 
-        $this->addColumn('position', array(
-            'header' => $this->__('Position'),
+        $this->addColumn('city', array(
+            'header' => $this->__('City'),
             'align'  => 'right',
             'width'  => '100px',
             'index'  => 'position'
+        ));
+        $this->addColumn('region', array(
+            'header' => $this->__('Region'),
+            'align'  => 'right',
+            'width'  => '100px',
+            'index'  => 'region'
+        ));
+        $this->addColumn('country', array(
+            'header' => $this->__('Coutry'),
+            'align'  => 'right',
+            'width'  => '100px',
+            'index'  => 'country'
         ));
 
         return parent::_prepareColumns();
