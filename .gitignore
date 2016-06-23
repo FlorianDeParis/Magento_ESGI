@@ -106,3 +106,4 @@ skin/install/
 var/
 .idea/
 nbproject/
+app/etc/local.xml

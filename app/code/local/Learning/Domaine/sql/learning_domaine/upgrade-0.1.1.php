@@ -19,6 +19,7 @@ $cepageTable = $installer->getConnection()
     ))
     ->addColumn('name', Varien_Db_Ddl_Table::TYPE_TEXT, 255, array())
     ->addColumn('image_url', Varien_Db_Ddl_Table::TYPE_TEXT, 255, array())
+    ->addColumn('is_active', Varien_Db_Ddl_Table::TYPE_BOOLEAN, null, array())        
     ->addColumn('city', Varien_Db_Ddl_Table::TYPE_TEXT, 255, array())
     ->addColumn('region', Varien_Db_Ddl_Table::TYPE_TEXT, 255, array())
     ->addColumn('country', Varien_Db_Ddl_Table::TYPE_TEXT, 255, array());
