@@ -4,6 +4,9 @@
     <?php foreach ($cepages as $cepage): ?>
         <li>
             <img src="<?php echo Mage::helper('learning_domaine')->getImageUrl($cepage->getImageUrl()); ?>" title="<?php echo $cepage->getName(); ?>" >
+            <div>
+                <?php echo $cepage->getDescription(); ?>
+            </div>
         </li>
     <?php endforeach; ?>
 
