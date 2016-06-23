@@ -1,6 +1,6 @@
 <?php
 
-class Learning_Domaine_Adminhtml_Domaine_DomaineController extends Mage_Adminhtml_Controller_Action
+class Learning_Domaine_Adminhtml_Domaine_CepageController extends Mage_Adminhtml_Controller_Action
 {
 
     /**
