@@ -14,9 +14,9 @@ class Learning_Domaine_Block_Adminhtml_Cepage_Edit_Tabs extends Mage_Adminhtml_B
     protected function _beforeToHtml()
     {
         $this->addTab('form_section', array(
-            'label' => Mage::helper('learning_domaine')->__('Domaines liés'),
-            'title' => Mage::helper('learning_domaine')->__('Domaines liés'),
-            'content' => $this->getLayout()->createBlock('learning_domaine/adminhtml_cepage_edit_tab_form')->toHtml()
+            'label' => Mage::helper('learning_domaine')->__('Test'),
+            'title' => Mage::helper('learning_domaine')->__('Test'),
+            'content' => 'Nothing'
         ));
 
         return parent::_beforeToHtml();
