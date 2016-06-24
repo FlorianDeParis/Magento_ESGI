@@ -16,7 +16,8 @@ $installer->getConnection()->addColumn(
 $installer->addAttribute(
         'catalog_product', 'cepage_name', array(
     'label' => 'Cepage name',
-    'type' => 'static'
+    'type' => 'static',
+    'length' => 255
         )
 );
 
