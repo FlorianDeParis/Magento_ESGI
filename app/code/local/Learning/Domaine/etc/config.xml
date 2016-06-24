@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Learning_Domaine>
-            <version>0.1.2</version>
+            <version>0.1.3</version>
         </Learning_Domaine>
     </modules>
     <global>
@@ -50,6 +50,17 @@
                 </connection>
             </learning_domaine_read>
         </resources>
+        <events>
+            <catalog_product_get_final_price>
+                <observers>
+                    <xyz_catalog_price_observer>
+                        <type>singleton</type>
+                        <class>Xyz_Catalog_Model_Price_Observer</class>
+                        <method>apply_discount_percent</method>
+                    </xyz_catalog_price_observer>
+                </observers>
+            </catalog_product_get_final_price>    
+        </events>
     </global>
     <frontend>
         <routers>
